@@ -19,29 +19,15 @@ var config = {
             backgroundColor: chartColors.red,
             borderColor: chartColors.red,
             data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
+                10,
+                20,
+                13,
+                16,
+                12,
+                22,
+                14
             ],
             fill: false,
-        }, {
-            label: 'My Second dataset',
-            fill: false,
-            backgroundColor: chartColors.blue,
-            borderColor: chartColors.blue,
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
         }]
     },
     options: {
@@ -79,7 +65,7 @@ var config = {
 
 var colorNames = Object.keys(chartColors);
 
-window.onload = function() {
+onload = function() {
     var ctx = document.getElementById('canvas').getContext('2d');
-    window.myLine = new Chart(ctx, config);
+    myLine = new Chart(ctx, config);
 };
