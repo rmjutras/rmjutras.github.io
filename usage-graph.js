@@ -1,3 +1,14 @@
+var chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+};
+
+
 var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var config = {
     type: 'line',
@@ -5,8 +16,8 @@ var config = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: window.chartColors.red,
-            borderColor: window.chartColors.red,
+            backgroundColor: chartColors.red,
+            borderColor: chartColors.red,
             data: [
                 randomScalingFactor(),
                 randomScalingFactor(),
@@ -20,8 +31,8 @@ var config = {
         }, {
             label: 'My Second dataset',
             fill: false,
-            backgroundColor: window.chartColors.blue,
-            borderColor: window.chartColors.blue,
+            backgroundColor: chartColors.blue,
+            borderColor: chartColors.blue,
             data: [
                 randomScalingFactor(),
                 randomScalingFactor(),
@@ -65,6 +76,8 @@ var config = {
         }
     }
 };
+
+var colorNames = Object.keys(chartColors);
 
 window.onload = function() {
     var ctx = document.getElementById('canvas').getContext('2d');
