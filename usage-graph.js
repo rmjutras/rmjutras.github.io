@@ -8,7 +8,6 @@ var chartColors = {
 	grey: 'rgb(201, 203, 207)'
 };
 
-
 var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var config = {
     type: 'line',
@@ -65,7 +64,18 @@ var config = {
 
 var colorNames = Object.keys(chartColors);
 
+getJSON = function()
+{
+	console.log('henlooo');
+	obj = JSON.parse('{"name": "hello1","value": "world"}');
+	document.getElementById("demo").innerHTML =obj.name;
+	console.log(obj);
+};
+
 onload = function() {
+    getJSON();
     var ctx = document.getElementById('canvas').getContext('2d');
     myLine = new Chart(ctx, config);
 };
+
+
